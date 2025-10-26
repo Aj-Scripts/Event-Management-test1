@@ -50,13 +50,18 @@
    - Create a `.env` file in the `backend` directory
    - Add necessary environment variables (e.g., MongoDB connection string, JWT secret, email service credentials)
 
-   JWT_SECRET=your_jwt_secret_here
+    JWT_SECRET=your_jwt_secret_here
     
     NODE_ENV=development
+   
     USE_ETHEREAL=false
+   
     EMAIL_USER=your email Id
+   
     EMAIL_PASS=app password from google account
+   
     MONGO_URI=
+   
     PORT=5000
 
 
@@ -64,18 +69,19 @@
 
 1. Start MongoDB (if running locally):
    ```
+   ```
 
    
 
 2. Seed the database with sample data:
    ```
    cd backend
-   npm run seed
+   node scripts/seed.js
    ```
 
 3. Start the backend server:
    ```
-   npm run dev
+   npm run dev or node server.js
    ```
    The backend will run on `http://localhost:5000` (or configured port).
 
@@ -90,7 +96,7 @@
 
 ### Backend API Testing
 
-Use tools like Postman, Insomnia, or curl to test the APIs.
+Use Postman to test the APIs.
 
 #### Authentication
 - **Register**: POST `/api/auth/register`
